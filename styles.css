@@ -480,6 +480,7 @@ h1 em {
 
 .founder,
 .prompts,
+.token-fund,
 .proof {
   padding-block: 130px;
 }
@@ -760,6 +761,162 @@ h1 em {
   font-size: 0.65rem;
 }
 
+.token-fund {
+  border-top: 1px solid var(--line);
+}
+
+.token-fund-heading {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 54px;
+}
+
+.token-fund-heading h2 {
+  margin: 0;
+  font-size: clamp(3.2rem, 6vw, 6.3rem);
+}
+
+.token-fund-heading > p {
+  max-width: 410px;
+  margin: 0;
+  color: var(--paper-dim);
+}
+
+.token-fund-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 16px;
+}
+
+.token-address-card {
+  display: flex;
+  min-height: 500px;
+  flex-direction: column;
+  padding: clamp(28px, 5vw, 54px);
+  background: var(--acid);
+  color: var(--ink);
+  box-shadow: 12px 12px 0 rgba(199, 255, 69, 0.16);
+}
+
+.token-address-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(8, 8, 10, 0.45);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.token-address-topline strong {
+  padding: 4px 8px;
+  border: 1px solid var(--ink);
+}
+
+.token-address-label {
+  margin: auto 0 10px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.token-address-card code {
+  display: block;
+  margin-bottom: 30px;
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(1.8rem, 4.2vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.token-copy-button {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.token-address-card > small {
+  margin-top: 18px;
+  color: rgba(8, 8, 10, 0.68);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.token-ledger {
+  display: flex;
+  min-height: 500px;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 42px);
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.token-ledger-status {
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.token-ledger-status span,
+.token-ledger-status small {
+  display: block;
+  color: var(--paper-dim);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.token-ledger-status strong {
+  display: block;
+  margin-block: 4px;
+  color: var(--pink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.token-wishlist {
+  padding-block: 28px;
+}
+
+.token-wishlist p {
+  margin-bottom: 14px;
+  color: var(--acid);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.token-wishlist ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--paper-dim);
+  font-size: 0.82rem;
+}
+
+.token-wishlist li + li {
+  margin-top: 8px;
+}
+
+.token-ledger blockquote {
+  margin: auto 0 0;
+  padding: 18px;
+  border-left: 3px solid var(--pink);
+  background: rgba(255, 79, 216, 0.08);
+  color: var(--paper);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .proof {
   border-top: 1px solid var(--line);
 }
@@ -915,7 +1072,8 @@ h1 em {
   }
 
   .section-heading,
-  .section-heading-wide {
+  .section-heading-wide,
+  .token-fund-heading {
     grid-template-columns: 1fr;
   }
 
@@ -946,6 +1104,7 @@ h1 em {
   }
 
   .prompt-grid,
+  .token-fund-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;
   }
@@ -1045,11 +1204,13 @@ h1 em {
 
   .founder,
   .prompts,
+  .token-fund,
   .proof {
     padding-block: 90px;
   }
 
   .section-heading h2,
+  .token-fund-heading h2,
   .closing-cta h2 {
     font-size: clamp(3rem, 15vw, 4.6rem);
   }
@@ -1071,6 +1232,19 @@ h1 em {
 
   .prompt-card {
     min-height: 0;
+  }
+
+  .token-address-card,
+  .token-ledger {
+    min-height: 0;
+  }
+
+  .token-address-card {
+    padding: 30px 24px;
+  }
+
+  .token-address-label {
+    margin-top: 80px;
   }
 
   .prompt-meta {

@@ -2,6 +2,8 @@ const counter = document.querySelector("#revenue-counter");
 const toast = document.querySelector("#toast");
 const checkoutButtons = document.querySelectorAll("[data-checkout]");
 const copyButtons = document.querySelectorAll("[data-copy-prompt]");
+const tokenCopyButton = document.querySelector("[data-copy-token]");
+const tokenAddress = document.querySelector("#token-address");
 
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -60,4 +62,20 @@ copyButtons.forEach((button) => {
       showToast("Clipboard funding round failed. Please copy the prompt manually.");
     }
   });
+});
+
+tokenCopyButton?.addEventListener("click", async () => {
+  const address = tokenAddress?.textContent?.trim();
+
+  if (!address) {
+    showToast("The token address was lost during a decentralized clipboard incident.");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(address);
+    showToast("Donation address copied. Transfer protocol remains under development.");
+  } catch {
+    showToast("Clipboard unavailable. Please memorize the fictional token address.");
+  }
 });
