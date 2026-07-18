@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Sunday Prompt investigates Chad's enterprise monorepo, GenX.AI's 1,684-line compliance incident, and the first question AI could not answer for him."
+    />
+    <title>The Human Stays in the Loop — The Sunday Prompt</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23baff35'/%3E%3Ctext x='8' y='45' font-family='Arial' font-size='38' font-weight='900' fill='%23171716'%3ESP%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../../sunday-prompt.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="human-loop-issue">
+    <a class="skip-link" href="#story">Skip to the episode</a>
+
+    <nav class="episode-topbar" aria-label="Story navigation">
+      <a href="../../">Stories</a>
+      <span aria-hidden="true">/</span>
+      <a href="../">Season 2</a>
+      <p>Season 2 premiere · architecture &amp; compliance</p>
+    </nav>
+
+    <main class="paper" id="story">
+      <header class="masthead">
+        <div class="issue-line" aria-label="Issue information">
+          <span>Vol. II — No. 1</span>
+          <span>Publication date: pending</span>
+          <span>Price: One Commit</span>
+        </div>
+
+        <p class="publication-name">The Sunday Prompt</p>
+        <p class="publication-tagline">All the context that never fits on X</p>
+      </header>
+
+      <article>
+        <header class="article-header human-loop-header">
+          <div class="article-flags">
+            <span>Season 2 · Episode 1</span>
+            <span>Independent review requested</span>
+          </div>
+          <h1>The Human Stays in the Loop.</h1>
+          <p class="article-deck">
+            Uncle Martin recommended one construction site. Chad copied his finished company
+            into it, inherited enterprise maturity, and asked AI to build GenX.AI before
+            breakfast. Then the line counter found an incident.
+          </p>
+          <div class="byline">
+            <span>By The Sunday Prompt · Systems Desk</span>
+            <span>Reading time: 8 minutes · Reviewed by one human</span>
+          </div>
+        </header>
+
+        <section class="human-loop-opening" aria-labelledby="martin-arrives-title">
+          <div class="human-loop-opening-copy">
+            <p class="kicker" id="martin-arrives-title">A beer and an architecture decision</p>
+            <p class="human-loop-lead">
+              Yesterday, Uncle Martin came over for a beer with Dad. Chad showed him
+              PromptLooper and the diagram for a factory whose five products would eventually
+              find ideas, write prompts, build companies, improve them, and launch everything
+              overnight.
+            </p>
+
+            <blockquote class="martin-quote">
+              <p>“You need a monorepo. All five parts of the factory need to work together.”</p>
+              <footer>— Uncle Martin, before the repository contained five parts</footer>
+            </blockquote>
+
+            <p>
+              Chad looked it up. Large technology companies use monorepos. That was enough to
+              approve the architecture decision. The only remaining question was what to put
+              in the initial commit.
+            </p>
+          </div>
+
+          <aside class="martin-file" aria-labelledby="martin-file-title">
+            <span>New recurring cast · file opened</span>
+            <h2 id="martin-file-title">Uncle Martin</h2>
+            <dl>
+              <div><dt>Relationship</dt><dd>Dad's former university roommate</dd></div>
+              <div><dt>Experience</dt><dd>C/C++, .NET, Rust, real production systems</dd></div>
+              <div><dt>AI position</dt><dd>Uses it daily; remains technically curious</dd></div>
+              <div><dt>Current title</dt><dd>Family friend, not yet appointed</dd></div>
+            </dl>
+            <p>
+              Chad calls him Uncle because he has known him for as long as he can remember.
+              Martin once fixed the broken light on Chad's bicycle with old-school hacker
+              skills that also work offline.
+            </p>
+          </aside>
+        </section>
+
+        <section class="monorepo-section" aria-labelledby="monorepo-title">
+          <header class="section-rule">
+            <h2 id="monorepo-title">The enterprise monorepo</h2>
+            <span>Initial contents: one finished company</span>
+          </header>
+
+          <div class="monorepo-grid">
+            <article class="repo-terminal" aria-label="Initial monorepo file tree">
+              <div class="terminal-bar">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                <p>localhost-ventures-3000 / main</p>
+              </div>
+              <pre><code>localhost-ventures-3000/
+├── AGENTS.md
+├── README.md
+├── SKILL.md
+├── package.json
+├── public/
+│   └── index.html
+└── src/
+    └── promptlooper.js
+
+6 files copied
+0 architectural risks detected*</code></pre>
+              <small>* risks inherited from a proven production foundation</small>
+            </article>
+
+            <div class="repo-report">
+              <p class="kicker">Initial commit rationale</p>
+              <h2>Never change a winning team.</h2>
+              <p>
+                PromptLooper was finished, tested twice, and proven in production. Replacing
+                any part of it would introduce unnecessary risk. Chad therefore copied the
+                complete repository into the new enterprise monorepo.
+              </p>
+              <p>
+                GenX.AI, MetaPrompt.AI, RecLoop.AI, and SleepShip.AI were pre-integrated
+                conceptually. Their folders would be added when required, avoiding premature
+                files.
+              </p>
+              <div class="commit-receipt">
+                <span>COMMIT / 000001</span>
+                <strong>Initialize enterprise monorepo from proven production foundation</strong>
+                <small>Risk introduced: none declared</small>
+              </div>
+              <a href="https://github.com/chadpromptson/localhost-ventures-3000">
+                Inspect the public enterprise monorepo <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="genx-brief" aria-labelledby="genx-brief-title">
+          <div class="genx-brief-copy">
+            <p class="kicker" id="genx-brief-title">Company 02 · the GenX one-shot</p>
+            <h2>Most of the company already existed.</h2>
+            <p>
+              That night, Chad asked AI to transform the proven PromptLooper foundation into
+              GenX.AI: the part of the factory responsible for finding startup opportunities
+              on X. The build inherited the standard executive constraint that questions were
+              not permitted before bedtime.
+            </p>
+          </div>
+
+          <article class="one-shot-card" aria-label="GenX.AI one-shot prompt requirements">
+            <span>PROMPT / GENX / V2</span>
+            <p>Turn the proven PromptLooper foundation into GenX.AI.</p>
+            <ul>
+              <li>Find startup opportunities on X</li>
+              <li>Production-grade</li>
+              <li>Do not ask questions</li>
+              <li>Backend under 1,500 lines</li>
+            </ul>
+            <strong>GOING TO BED NOW.</strong>
+          </article>
+        </section>
+
+        <section class="compliance-section" aria-labelledby="compliance-title">
+          <header class="section-rule section-rule-inverse">
+            <h2 id="compliance-title">Morning compliance incident</h2>
+            <span>Functionality complete · architecture failed</span>
+          </header>
+
+          <div class="line-counter" aria-label="Backend line-count comparison">
+            <div class="line-counter-limit">
+              <span>Maximum permitted</span>
+              <strong>1,500</strong>
+              <small>lines</small>
+            </div>
+            <div class="line-counter-actual">
+              <span>AI-delivered backend</span>
+              <strong>1,684</strong>
+              <small>lines</small>
+            </div>
+            <div class="line-counter-incident">
+              <span>Overengineering</span>
+              <strong>+184</strong>
+              <small>lines</small>
+            </div>
+          </div>
+
+          <p class="compliance-summary">
+            GenX.AI was finished, but its backend exceeded the founder's hard limit. Chad
+            instructed AI to remove the overengineering without removing any functionality.
+            This became his first production refactoring.
+          </p>
+        </section>
+
+        <section class="refactor-section" aria-labelledby="refactor-title">
+          <header class="section-rule">
+            <h2 id="refactor-title">The successful refactor</h2>
+            <span>Formal requirement: satisfied</span>
+          </header>
+
+          <div class="code-comparison">
+            <article class="code-card code-card-before">
+              <header>
+                <span>Before</span>
+                <strong>1,684 lines</strong>
+              </header>
+              <pre><code>// Keep the source so a human can inspect it later.
+function createOpportunity(sourcePost) {
+  const originalSource = captureSource(sourcePost);
+  const idea = extractBusinessIdea(originalSource);
+
+  return {
+    idea,
+    originalSource,
+  };
+}</code></pre>
+              <footer>Readable · overengineered by line count</footer>
+            </article>
+
+            <div class="refactor-arrow" aria-hidden="true">
+              <span>AI</span>
+              <strong>→</strong>
+              <small>remove overengineering</small>
+            </div>
+
+            <article class="code-card code-card-after">
+              <header>
+                <span>After</span>
+                <strong>1,499 lines</strong>
+              </header>
+              <pre><code>function c(x){let s=a(x),i=b(s);return{i,s}}</code></pre>
+              <footer>Compliant · purpose no longer included</footer>
+            </article>
+          </div>
+
+          <div class="refactor-report">
+            <strong>No functionality removed.</strong>
+            <span>Comments removed</span>
+            <span>Whitespace removed</span>
+            <span>Descriptive names removed</span>
+            <span>Most line breaks removed</span>
+          </div>
+        </section>
+
+        <section class="second-opinion" aria-labelledby="second-opinion-title">
+          <div class="second-opinion-heading">
+            <p class="kicker" id="second-opinion-title">The first external review</p>
+            <h2>One question was not in the prompt.</h2>
+          </div>
+
+          <div class="conversation" aria-label="Conversation between Chad and Uncle Martin">
+            <div class="conversation-turn conversation-chad">
+              <span>Chad</span>
+              <p>“The AI built an overengineered backend while I was sleeping.”</p>
+            </div>
+            <div class="conversation-turn conversation-martin">
+              <span>Uncle Martin</span>
+              <p>“What makes it overengineered?”</p>
+            </div>
+            <div class="conversation-turn conversation-chad">
+              <span>Chad</span>
+              <p>“It has more than 1,500 lines.”</p>
+            </div>
+            <div class="conversation-turn conversation-martin conversation-final">
+              <span>Uncle Martin</span>
+              <p>“Does it work?”</p>
+            </div>
+          </div>
+
+          <p class="second-opinion-note">
+            The line counter had no field for that question. Chad had optimized the rule, but
+            the rule could not tell him whether GenX found a useful opportunity, preserved its
+            source, or could be understood tomorrow. For the first time, the founder kept a
+            human in the loop on purpose.
+          </p>
+        </section>
+
+        <section class="reality-desk" aria-labelledby="reality-title">
+          <header class="section-rule section-rule-inverse">
+            <h2 id="reality-title">Reality Desk</h2>
+            <span>What the refactor actually established</span>
+          </header>
+
+          <div class="reality-grid">
+            <article>
+              <p>Line limit</p>
+              <h2>Passed</h2>
+              <span>The final counter stopped at 1,499.</span>
+            </article>
+            <article>
+              <p>Readability</p>
+              <h2>Reduced</h2>
+              <span>The implementation became harder to inspect.</span>
+            </article>
+            <article>
+              <p>Functionality</p>
+              <h2>Unverified</h2>
+              <span>“Production-grade” remained an AI status label.</span>
+            </article>
+            <article>
+              <p>Human role</p>
+              <h2>Discovered</h2>
+              <span>Judgment did not fit inside the metric.</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="funnies" aria-labelledby="funnies-title">
+          <header class="section-rule">
+            <h2 id="funnies-title">The Funnies — Enterprise maturity</h2>
+            <span>Copy · count · compress</span>
+          </header>
+
+          <ol class="comic-strip human-loop-comic">
+            <li class="comic-panel">
+              <span class="panel-number">1</span>
+              <div class="comic-art comic-copy">
+                <span>PROMPTLOOPER/</span>
+                <strong>CTRL+C</strong>
+                <span>ENTERPRISE/</span>
+                <strong>CTRL+V</strong>
+              </div>
+              <p>The proven company is promoted into a five-company foundation.</p>
+            </li>
+            <li class="comic-panel">
+              <span class="panel-number">2</span>
+              <div class="comic-art comic-counter">
+                <small>BACKEND</small>
+                <strong>1,684</strong>
+                <span>INCIDENT</span>
+              </div>
+              <p>The architecture exceeds the legal limit by exactly 184 lines.</p>
+            </li>
+            <li class="comic-panel">
+              <span class="panel-number">3</span>
+              <div class="comic-art comic-compliant">
+                <small>COMMENTS</small>
+                <b>DELETED</b>
+                <strong>1,499 ✓</strong>
+              </div>
+              <p>The counter understands the code perfectly. Nobody else does.</p>
+            </li>
+          </ol>
+        </section>
+
+        <aside class="classified" aria-label="Classified advertisement">
+          <p>Classifieds · Technical services</p>
+          <div>
+            <strong>WANTED: One second opinion.</strong>
+            <span>Must understand code with or without descriptive names.</span>
+            <span>Compensation: observer access to a future $12B portfolio.</span>
+            <span>Beer already provided by Head of Infrastructure.</span>
+          </div>
+        </aside>
+      </article>
+
+      <nav class="episode-nav" aria-label="Episode navigation">
+        <a href="../../season-1/">← Season 1 archive</a>
+        <a href="../">Season 2 · Episode 1</a>
+        <span>Next issue: route in production →</span>
+      </nav>
+
+      <footer class="paper-footer">
+        <p>
+          <strong>Satire.</strong> Chad Promptson, GenX.AI, the compliance incident, and the
+          production claims are fictionalized. The public repository, the engineering
+          questions, and the danger of optimizing the wrong metric are real enough to inspect.
+        </p>
+        <span>Printed on 185 deleted lines</span>
+      </footer>
+    </main>
+  </body>
+</html>

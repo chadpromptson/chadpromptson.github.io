@@ -384,6 +384,7 @@
 
 .season-copy {
   display: flex;
+  min-width: 0;
   flex-direction: column;
   padding: clamp(32px, 5vw, 62px);
 }
@@ -409,7 +410,7 @@
 
 .season-copy h2 {
   margin: 48px 0 28px;
-  font-size: clamp(3rem, 5.5vw, 5.8rem);
+  font-size: clamp(2.8rem, 4.8vw, 4.1rem);
 }
 
 .season-copy > p {
